@@ -1,0 +1,85 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        div{
+         display: flex;
+         justify-content: center;
+         margin-top: 200px;
+
+        }
+        button{
+            margin-left: 10px;
+        }
+        p{
+            font-family: Arial, Helvetica, sans-serif;
+            justify-content: center;
+            display: flex;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="Form">
+    <input type="text" id="nameInput" placeholder="Enter name:" name = 'name'>
+    <label for="nameInput"></label>
+    <button onclick="getName()">Submit</button>
+</div>
+    <p id="ptag">
+
+    </p>
+   
+    <script>
+        function getName(){
+        let value = document.getElementById('nameInput').value
+        document.getElementById('ptag').innerHTML = `Hello ${value}`
+        }
+    </script>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        div{
+
+            display: flex;
+            justify-content: center;
+            margin-top: 100px;
+            width: 100%;
+            padding: 40px;
+        }
+        .bgi {
+            background-image: url('https://as2.ftcdn.net/v2/jpg/07/55/23/15/1000_F_755231557_DauOKboaRNsjIqRLc5Z2hvpiuT3JFPa9.jpg');
+            height: fit-content;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image replace</title>
+</head>
+<body>
+    <div class="wrapper">
+        <img id="image" onmouseenter="replaceImg()" src="https://as2.ftcdn.net/v2/jpg/07/55/23/15/1000_F_755231557_DauOKboaRNsjIqRLc5Z2hvpiuT3JFPa9.jpg" onmouseleave="revert()">
+    </div>
+    <script>
+        function replaceImg(){
+            let img = document.querySelector('img')
+            img.setAttribute('src','https://as2.ftcdn.net/v2/jpg/07/55/22/93/1000_F_755229393_BXolYn7aYpHkhy1eAlsxA9vZqfU2C65o.jpg')
+            //document.querySelector('div').style.justifyContent = 'right'
+            document.querySelector('div').classList.add('bgi')
+
+        }
+        function revert(){
+            let img = document.querySelector('img')
+            img.setAttribute('src','https://as2.ftcdn.net/v2/jpg/07/55/23/15/1000_F_755231557_DauOKboaRNsjIqRLc5Z2hvpiuT3JFPa9.jpg')
+            //document.querySelector('div').style.justifyContent = 'center' 
+            document.querySelector('div').classList.remove('bgi')
+        }
+    </script>
+</body>
+</html> -->
+

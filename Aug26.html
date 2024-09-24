@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+            background-color: black;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: auto
+        }
+        input{
+            margin-top: 10px;
+            display: block;
+            height: 15px;
+            width: 20%;
+            margin-bottom: 20px;
+            padding: 20px;
+        } 
+        button{
+            height: 50px;
+            width: 10%;
+            font-size: 25px;
+            border-radius: 100px;
+            background-color: rgb(30, 103, 222);
+            color: white;
+            border: none;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Event listners</title>
+</head>
+<body>
+    <div class="container">
+        <form>
+            <input type="text" id="name" placeholder="Enter Your name">
+            <input type="text" id="email" placeholder="Enter Your Email ID">
+            <input type="text" id="phno" placeholder="Enter Your Phone number">
+            <input type="password" id="password" placeholder="Enter Your Password">
+        </form>
+    <button>Submit</button>
+    </div>
+    <p>
+
+    </p>
+    <script>
+        const btn = document.querySelector('button')
+        btn.addEventListener('click',(event) => {
+            console.log('Inside the button was',event.target.textContent)
+            if(event.target.textContent == 'Submit'){
+                event.target.textContent = 'Submitted'  
+            }
+            else{
+                event.target.textContent = 'Submit'
+            }
+            
+            })
+            const name = document.querySelector('#name')
+            name.addEventListener('blur' ,(e) => {
+                let tvalue = e.target.value
+                if(tvalue ==''){
+                    e.target.style.color = 'red'
+                }
+                
+        })
+    </script>
+</body>
+</html>

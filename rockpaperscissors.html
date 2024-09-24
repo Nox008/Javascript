@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <h3>Rock Paper Scissors</h3>
+    <p>Pick your choice</p>
+    <button onclick="
+    pickComputerMove()
+    result('Rock')
+    ">Rock</button>
+    <button onclick="
+    pickComputerMove()
+    result('Paper')
+    ">Paper</button>
+    <button onclick="
+    pickComputerMove()
+    result('Scissor')
+    ">Scissor</button>
+    <script>
+        let computerMove = '';
+        function pickComputerMove(){
+            let computerLove
+            computerLove = Math.random();
+            if(computerLove>=0 && computerLove<1/3){
+                computerMove = 'Rock'
+            }
+            else if(computerLove>=1/3 && computerLove<2/3){
+                computerMove = 'Paper'
+            }
+            else if(computerLove>=2/3 && computerLove<=1){
+                computerMove = 'Scissor'
+            }
+        }
+        function result(playerM){
+            let result = ''
+            if(playerM == 'Rock'){
+                if(computerMove == 'Rock'){
+                    result = 'Tie'
+                }
+                else if(computerMove == 'Paper'){
+                    result = 'You lose'
+                }
+                else if(computerMove == 'Scissor'){
+                    result = 'You win'
+                }
+                return alert(`You chose ${playerM} computer picked ${computerMove}, ${result}`)
+            }
+            else if(playerM == 'Paper'){
+                if(computerMove == 'Rock'){
+                    result = 'You win'
+                }
+                else if(computerMove == 'Paper'){
+                    result = 'Tie'
+                }
+                else if(computerMove == 'Scissor'){
+                    result = 'You lose'
+                }
+                return alert(`You chose ${playerM} computer picked ${computerMove}, ${result}`)
+            }
+            else if(playerM == 'Scissor'){
+                if(computerMove == 'Rock'){
+                    result = 'You lose'
+                }
+                else if(computerMove == 'Paper'){
+                    result = 'You win'
+                }
+                else if(computerMove == 'Scissor'){
+                    result = 'Tie'
+                }
+                return alert(`You chose ${playerM} computer picked ${computerMove}, ${result}`)
+            }
+        }
+    </script>
+</body>
+</html>

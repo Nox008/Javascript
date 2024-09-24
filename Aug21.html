@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        h1{
+            display: flex;
+            margin: 0px;
+            padding: 10px;
+            justify-content: center;
+        }
+        .Titles{
+           
+            background-image: linear-gradient(rgb(170, 89, 89),rgb(168, 168, 127));
+            width: 300px;
+            
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="Titles" id="container">
+    <h1 class="title" id="Title1">Title 1</h1>
+    <h1 class="title">Title 2</h1>
+    <h1 class="title">Title 3</h1>
+    </div>
+    <script> 
+    /* const allTitles = document.getElementsByTagName('h1') 
+    const titles = document.getElementsByClassName('title')
+    console.log(allTitles)
+    console.log(allTitles.length)
+    for(i=0;i<allTitles.length;i++){
+        console.log(allTitles[i])
+    }
+    console.log(titles)
+    const firstTitle = document.getElementById('Title1')
+    console.log(firstTitle.innerHTML)
+    firstTitle.innerHTML='Hello World' */
+    const h1 = document.querySelector('h1')
+    console.log(h1.innerHTML)
+    const allTitles = document.querySelectorAll('.title')
+    allTitles.forEach(title => console.log(title.innerHTML.toUpperCase()))
+    let t = h1.innerHTML
+    t = t.toUpperCase()
+    h1.innerHTML= t
+    </script>
+</body>
+</html>

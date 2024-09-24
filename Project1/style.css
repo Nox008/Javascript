@@ -1,0 +1,115 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    scroll-behavior: smooth;
+    font-family: Arial, sans-serif;
+}
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.wrapper {
+    display: flex;
+    height: 100vh; /* Adjusts the height of both containers */
+}
+
+.container1, .container2, .container3 {
+    flex: 1; /* Makes the containers take up equal space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin: 10px;
+    border-radius: 10px;
+}
+.mainHead{
+    color: black;
+    font-family: cursive;
+    font-size: larger;
+    background-color: rgba(255, 255, 255, .8);
+    border: none;
+    padding: 20px;
+    border-radius: 20px;
+}
+.info{
+    margin-left: 25px;
+}
+.basicDetails{
+    background-color: rgba(255, 255, 255, .9) ;
+    border: none;
+    height: auto;
+    border-radius: 30px;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 100%;
+}
+#BDH{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.8rem; 
+    margin-bottom: 20px;
+}
+#LDOB{
+    font-size: medium;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 10px;
+}
+#SVal{
+            width: 100%;
+            padding: 10px;
+            background-color: #388dc9;
+            color: black;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+}
+#SVal:hover{
+    background-color: #5b9ac7;
+    color: black;
+}
+::placeholder{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    padding: 10px;
+}
+#fname,#lname{
+    display: block;
+    height: 30px;
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.container1 {
+    background-image: url('https://images.pexels.com/photos/256417/pexels-photo-256417.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+}
+
+.container2 {
+    background-color: rgba(255, 255, 255, 0.815);
+    text-align: center;
+}
+
+.container3 {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+    height: 100vh; /* Full screen height for this container */
+    background-image: url('https://images.pexels.com/photos/159823/kids-girl-pencil-drawing-159823.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+}

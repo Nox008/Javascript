@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh; /* Ensures the body takes up the full height of the viewport */
+            display: flex;
+            flex-direction: column;
+            background-image: url('https://images.pexels.com/photos/6794094/pexels-photo-6794094.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background-color: rgb(210, 107, 63);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            color: white;
+            opacity: 80%;
+        }
+        .navbar .about h3 {
+            margin: 0;
+            font-size: large;
+        }
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        .navbar ul li {
+            margin-left: 20px;
+        }
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: medium;
+            transition: color 0.3s;
+        }
+        .navbar ul li a:hover {
+            color: #ffe6cc;
+            border: none;
+            border-radius: 10px;
+            padding: 10px;
+            /* border-bottom: solid rgb(75, 4, 4);
+            border-left: solid rgb(75, 4, 4);  */
+            box-shadow: 0px 4px 8px rgb(75, 4, 4);
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            opacity: 85%;
+        }
+        .container form {
+            width: 100%;
+        }
+        #fname, #email, #passw {
+            display: block;
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: rgb(210, 107, 63);
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #d39062;
+            color: black;
+        }
+        #mainH {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Registration Form</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="about">
+            <h3>Registration Form</h3>
+        </div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <div id="popup" popover>This is a popup</div>
+        <form id="RegForm">
+            <h3 id="mainH">Registration Form</h3>
+            <input type="text" id="fname" placeholder="Enter Full name" required>
+            <input type="email" id="email" placeholder="Enter Email ID" required>
+            <input type="password" id="passw" placeholder="Enter Password" required>
+            <button type="submit" id="btn" popovertarget="popup">Submit</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('RegForm').addEventListener('submit',function(e){
+            e.preventDefault();
+            let isValid = true;
+
+            const fnval = (fName)=>{
+            let ref = /^[a-zA-Z]+$/;
+            if(!ref.test(fName)){
+            alert('Invalid name')
+            isValid = false
+            } }
+
+            /* const eval = (Email)=>{
+                let eref =  /^[a-zA-Z0-9. _%+-]+@[a-zA-Z0-9. -]+\\. [a-zA-Z]{2,}$/;
+                if(!eref.test(Email)){
+                    alert('Invalid Email id')
+                    isValid = false
+                }
+            } */
+
+            const passval = (password)=>{
+                let pref = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/
+                if(!pref.test(password)){
+                    alert('Password must contain At least one upper case English letter, At least one lower case English letter, At least one digit, At least one special character, Minimum eight in length.')
+                    isValid = false
+                }
+            }
+            
+
+            let fname = document.getElementById('fname').value;
+            fnval(fname)
+            let email = document.getElementById('email').value;
+            let pass = document.getElementById('passw').value;
+            passval(pass)
+
+            if(isValid){
+            console.log(`Fullname ${fname} Email: ${email} Password: ${pass}`)
+            alert('Details Logged')
+            document.getElementById('RegForm').reset();
+            }
+        })
+
+    </script>
+</body>
+</html>

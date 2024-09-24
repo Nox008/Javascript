@@ -1,0 +1,325 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-group input:focus, .form-group select:focus {
+            border-color: #007bff;
+        }
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        .error {
+            color: red;
+            margin-top: 5px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Patient Registration</h2>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+                <div class="error" id="nameError"></div>
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob" required>
+                <div class="error" id="dobError"></div>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+                <div class="error" id="genderError"></div>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+                <div class="error" id="phoneError"></div>
+            </div>
+            <button type="submit" class="btn">Register</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            let isValid = true;
+
+            // Clear previous errors
+            document.getElementById('nameError').innerText = '';
+            document.getElementById('dobError').innerText = '';
+            document.getElementById('genderError').innerText = '';
+            document.getElementById('phoneError').innerText = '';
+
+            // Validate name
+            const name = document.getElementById('name').value;
+            if (name.trim() === '') {
+                document.getElementById('nameError').innerText = 'Full Name is required.';
+                isValid = false;
+            }
+
+            // Validate date of birth
+            const dob = document.getElementById('dob').value;
+            if (dob === '') {
+                document.getElementById('dobError').innerText = 'Date of Birth is required.';
+                isValid = false;
+            }
+
+            // Validate gender
+            const gender = document.getElementById('gender').value;
+            if (gender === '') {
+                document.getElementById('genderError').innerText = 'Gender is required.';
+                isValid = false;
+            }
+
+            // Validate phone
+            const phone = document.getElementById('phone').value;
+            if (phone.trim() === '') {
+                document.getElementById('phoneError').innerText = 'Phone Number is required.';
+                isValid = false;
+            }
+
+            // If the form is valid, submit it
+            if (isValid) {
+                alert('Registration successful!');
+                // Here you can add code to submit the form data to the server
+                // For example, using AJAX or a form action
+            }
+        });
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            background-image: url("https://img.freepik.com/free-photo/senior-woman-talking-with-her-doctor_23-2148962385.jpg?t=st=1724909836~exp=1724913436~hmac=c023a91bdeca6cdc07a269adb3ef5145dee700cf85f450ae291286b1bc9ee71a&w=996");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        .header {
+            width: 100%;
+            background-color: transparent;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header h1 {
+            color: black;
+            margin: 0;
+        }
+        .header button {
+            padding: 10px 20px;
+            background-color: #0c795c;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .header button:hover {
+            background-color: #14b087;
+            color: black;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px; 
+            opacity: 80%;
+            transition: opacity 0.3s ease-in-out;
+            margin-top: 120px;
+        }
+        .container:hover,.container:focus-within {
+            opacity: 100%;
+        }
+        h3 {
+            text-align: center;
+        }
+        input {
+            margin-bottom: 5px;
+            width: 100%;
+            height: 20px;
+        }
+        button.submit {
+            width: 100%;
+            padding: 10px;
+            background-color: #0c795c;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button.submit:hover {
+            background-color: #14b087;
+            color: black;
+        }
+        .error {
+            color: rgb(247, 72, 72);
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Patient Registration</h1>
+        <button onclick="about()">About</button>
+    </div>
+
+    <div class="container">
+        <h3>ENTER PATIENT DETAILS</h3>
+        <form id="refForm">
+            <label for="fname">Enter Full name</label>
+            <input type="text" id="fname" required>
+            <div class="error" id="fnameError"></div>
+            <label for="mname">Enter Middle Name</label>
+            <input type="text" id="mname">
+            <label for="lname">Enter last name</label>
+            <input type="text" id="lname" required>
+            <div class="error" id="lnameError"></div>
+            <label for="phno">Enter Mobile Number</label>
+            <input type="tel" id="phno" required>
+            <label for="email">Enter Email ID</label>
+            <input type="email" id="email" required>
+            <button type="submit" class="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function about() {
+            alert("This form is used to register patient details. Please fill in all required fields and submit.");
+        }
+
+        document.getElementById("refForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+            let isValid = true;
+
+            document.getElementById('fnameError').innerText = '';
+            document.getElementById('lnameError').innerText = '';
+
+            const namef = document.getElementById('fname').value;
+            if (namef.trim() === '') {
+                document.getElementById('fnameError').innerText = 'Invalid fullname';
+                isValid = false;
+            }
+
+            const namel = document.getElementById('lname').value;
+            if (namel.trim() === '') {
+                document.getElementById('lnameError').innerText = 'Invalid lastname';
+                isValid = false;
+            }
+
+            const fnval = (fname) => {
+                let ref = /^[a-zA-Z]+$/;
+                if (!ref.test(fname)) {
+                    alert('Invalid name');
+                    isValid = false;
+                }
+            }
+
+            const mval = (mobile) => {
+                let mref = /[0-9]{10}/;
+                if (!mref.test(mobile)) {
+                    alert('Invalid Phone number');
+                    isValid = false;
+                }
+            }
+
+            let fname = document.getElementById("fname").value;
+            fnval(fname);
+            let mname = document.getElementById("mname").value;
+            fnval(mname);
+            let lname = document.getElementById("lname").value;
+            fnval(lname);
+            let mobile = document.getElementById("phno").value;
+            mval(mobile);
+            let mail = document.getElementById("email").value;
+            let fr = Math.random();
+            let id = Math.round(fr * 10000);
+            
+            console.log("First name:", fname);
+            console.log("Middle name:", mname);
+            console.log('Last name:', lname);
+            console.log('Phone no.:', mobile);
+            console.log('Email ID:', mail);
+            console.log('Patient ID:', id);
+
+            if (isValid) {
+                alert(`Patient log uploaded, Patient ID is ${fname}${lname}${id}`);
+                document.getElementById('refForm').reset();
+            }
+        });
+    </script>
+</body>
+</html>

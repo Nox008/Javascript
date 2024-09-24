@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #name, #email {
+            display: block;
+            margin-top: 10px;
+        }
+        #male,#female{
+            display: inline;
+        }
+        button {
+            display: block;
+            margin-top: 10px;
+        }
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="form">
+        <form>
+            <input type="text" id="name" placeholder="Enter name">
+            <input type="email" id="email" placeholder="Enter email id">
+            <input type="radio" id="male" name="gender" value="Male">
+            <label for="male">Male</label>
+            <input type="radio" id="Female" name="gender" value="Female">
+            <label for="female">Female</label>
+            <div class="checkbox">
+            <input type="checkbox" id="hobbie1" name="hobbie1" value="Sleep">
+            <label for="hobbie1">I like to sleep</label>
+            <input type="checkbox" id="hobbie2" name="hobbie2" value="Music">
+            <label for="hobbie2">I love music</label>
+            <input type="checkbox" id="hobbie3" name="hobbie3" value="Game">
+            <label for="hobbie3">I am a gamer</label>
+            </div>
+            <button>Submit</button>
+        </form>
+    </div>
+    <script>
+      let btn = document.querySelector('button')
+      let getData = (selector,def)=>{
+       let data = document.querySelector(selector)
+       if(data == null || data.value == ''){
+        return def
+       }
+       else{
+        return data.value
+       }
+    }
+   /*  let selectGender = (selector,message)=>{
+        let data = document.querySelector(selector)
+        return data? data.value:message
+    } */
+   let hobbiesl = (selector,message)=>{
+    let data = document.querySelectorAll(selector)
+    let skillset = []
+    if(skills.length > 0){
+        skills.forEach(items => { items => {items ? skillset.push(items.value) : ""
+            });
+    }
+   }
+       btn.addEventListener('click', (e) =>{
+        e.preventDefault();
+        console.log('Fnmae:',getData('#name', 'name is required'))
+        console.log('Email:',getData('#email', 'email is reqired'))
+        console.log('Gender:',getData('input[name = "gender"]:checked','Gender required'))
+        console.log('Hobbies:')
+       })
+      
+    </script>
+</body>
+</html>

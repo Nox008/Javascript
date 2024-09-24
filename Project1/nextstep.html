@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Step</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://images.pexels.com/photos/8613319/pexels-photo-8613319.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        .container-wrapper {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1200px; /* Adjust as needed */
+            padding: 20px;
+        }
+        .container4, .container5, .container6 {
+            flex: 1;
+            background-color: rgba(230, 230, 230, 0.9);
+            text-align: center;
+            padding: 40px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .container4 input, .container4 select,
+        .container5 input, .container5 select,
+        .container6 input, .container6 select, 
+        .container6 label  {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .container6 .checkbox-group {
+            text-align: left;
+            text-align-last: left;
+            padding: 10px 0;
+        }
+        .container6 .checkbox-group input {
+            margin-right: 10px;
+        }
+        #gender{
+            width: 88%;
+        }
+        #finalSubmit {
+            margin-top: 20px;
+            padding: 15px 30px;
+            background-color: #388dc9;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        #finalSubmit:hover {
+            background-color: #5b9ac7;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-wrapper">
+        <div class="container4">
+            <h3>Student Details</h3>
+            <input type="text" id="fullName" placeholder="Full Name" required>
+            <input type="date" id="dob" placeholder="Date of Birth" required>
+            <select id="gender" required>
+                <option value="" disabled selected>Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            <input type="text" id="address" placeholder="Home Address" required>
+            <input type="text" id="phone" placeholder="Phone Number" required>
+            <input type="email" id="email" placeholder="Email Address" required>
+            <input type="text" id="city" placeholder="Area/City" required>
+        </div>
+        <div class="container5">
+            <h3>Parent Details</h3>
+            <input type="text" id="fatherName" placeholder="Father's Name" required>
+            <input type="text" id="motherName" placeholder="Mother's Name" required>
+            <input type="text" id="fatherOccupation" placeholder="Father's Occupation">
+            <input type="text" id="motherOccupation" placeholder="Mother's Occupation">
+            <input type="text" id="altPhone" placeholder="Alternative Phone Number">
+        </div>
+        <div class="container6">
+            <h3>Additional Information</h3>
+            <input type="text" id="previousSchool" placeholder="Previous School Name">
+            <!-- <div class="checkbox-group">
+                <label>Programming Languages Known:</label><br>
+                
+                <input type="checkbox" id="python" name="languages" value="Python">
+                <label for="python">Python</label><br>
+                <label for="javascript">JavaScript</label><br>
+                <input type="checkbox" id="javascript" name="languages" value="JavaScript">
+                <label for="c">C</label><br>
+                <input type="checkbox" id="c" name="languages" value="C">
+                <label for="cpp">C++</label><br>
+                <input type="checkbox" id="cpp" name="languages" value="C++">
+                <label for="java">Java</label>
+                <input type="checkbox" id="java" name="languages" value="Java">
+                
+            </div> -->
+            <select id="preferredLanguage" required>
+                <option value="" disabled selected>Select Preferred Programming Language</option>
+                <option value="python">Python</option>
+                <option value="javascript">JavaScript</option>
+                <option value="c">C</option>
+                <option value="cpp">C++</option>
+                <option value="java">Java</option>
+            </select>
+        </div>
+        </div>
+    </div>
+    
+    <button id="finalSubmit">Submit</button>
+</body>
+</html>
+

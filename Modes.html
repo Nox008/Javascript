@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="Morning" onclick="morning()">Morning Mode</button>
+    <button id="Afternoon" onclick="afternoon()">Afternoon Mode</button>
+    <button id="Eve" onclick="eve()">Evening Mode</button>
+    <button id="Night" onclick="night()">Night Mode</button>
+    <p>
+
+    </p>
+    <script>
+        function morning(){
+            document.body.style.backgroundImage = 'linear-gradient(to bottom right, rgb(108, 108, 207), rgb(133, 220, 133))'
+            document.body.style.backgroundSize = 'cover'
+            let morn = document.querySelector('p')
+            morn.innerHTML = 'Good Morning'
+
+        }
+        function afternoon(){
+            document.body.style.backgroundImage = 'linear-gradient(to bottom right, rgb(3, 236, 252), rgb(3, 252, 211))'
+            document.body.style.backgroundSize = 'cover'
+            let after = document.querySelector('p')
+            after.innerHTML = 'Good Afternoon'
+        }
+        function eve(){
+            document.body.style.backgroundImage = 'linear-gradient(to bottom right, rgb(252, 190, 3), rgb(252, 102, 3))'
+            document.body.style.backgroundSize = 'cover'
+            let evn = document.querySelector('p')
+            evn.innerHTML = 'Good Evening'
+        }
+        function night(){
+            document.body.style.backgroundImage = 'linear-gradient(to bottom right, rgb(207, 3, 252), rgb(111, 3, 252))'
+            document.body.style.backgroundSize = 'cover'
+            let ngt = document.querySelector('p')
+            ngt.innerHTML = 'Good Night'
+        }
+    </script>
+</body>
+</html>

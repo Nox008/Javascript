@@ -1,0 +1,61 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h1>Lists</h1>
+        <ul>
+
+        </ul>
+    <script>
+        const lists =' <li>Howdy</li>, <li>How</li>, <li>H</li>'
+        let slv = document.querySelector('ul')
+        slv.innerHTML = lists
+    </script>
+</body>
+</html> -->
+
+<!--  1.create an index.html file and put four p elements as above. Get the first paragraph by using document.queryselector(tagname) tagname
+2.get each of the p using queryselector(#id)
+3.get all node list using queryselector(tag)
+4.loop through the node list get the txt content
+5.set the text content of 4th para to 'Fourth paragraph'
+6.set id and class attribute for all the p using diffrent attribute setting method -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="one">Hello there</p>
+    <p id="two">Hmmmmm</p>
+    <p id="three">Howdy</p>
+    <p id="four">Huh!</p>
+    <p id="fifth"></p>
+    <script>
+       let q = document.querySelector('#one')
+       let w = document.querySelector('#two')
+       let e = document.querySelector('#three')
+       let r = document.querySelector('#four')
+       document.querySelector('#fifth').innerHTML = `${q.innerHTML} ${w.innerHTML} ${e.innerHTML} ${r.innerHTML}`
+       let nlist = document.querySelectorAll('p')
+       console.log(nlist)
+       for(i=0;i<nlist.length;i++){
+        console.log(nlist[i].innerHTML)
+       }
+       r.innerHTML = 'Fourth paragraph'
+    </script>
+</body>
+</html>
+<!-- 
+Level 2
+1. change style of each para using js(eg. color,bgcolor etc etc)
+2. Select all paragraphs and loop through each elements and give the first and third paragraph a color of green, and the second and the fourth paragraph a red color
+3. Set text content, id and class to each paragraph -->
+

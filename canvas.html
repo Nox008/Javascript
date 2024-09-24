@@ -1,0 +1,173 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <style>
+        *{
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        table,
+        th,
+        td {
+            border: 1px solid saddlebrown;
+            border-collapse: collapse;
+        }
+        th {
+            background-color: bisque;
+        }
+        td {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table{
+            background-color: rgb(142, 189, 189);
+            margin-top: 20px;
+        }
+        header{
+            display: flex;
+            gap: 5px;
+            justify-content: space-between;
+            background-color: rgb(120, 176, 157);
+            height: 30px;
+        }
+        footer{
+            display: block;
+            position: fixed;
+            background-color: rgb(98, 154, 72);
+        }
+    </style>
+    <title>Tables</title>
+</head>
+<body>
+    <header>
+        <div class="nav">
+            Hello
+        </div>
+        <div class="about">
+            <a href="">About</a>
+        </div>
+    </header>
+    <table style="width: 50%;">
+        <tr>
+            <th>Book Name</th>
+            <th>Author Name</th>
+            <th>Genre</th>
+        </tr>
+        <tr>
+            <td>The Book Thief</td>
+            <td>Markus Zusak</td>
+            <td>Historical Fiction</td>
+        </tr>
+        <tr>
+            <td>The Cruel Prince</td>
+            <td>Holly Black</td>
+            <td>Fantasy</td>
+        </tr>
+        <tr>
+            <td>The Silent Patient</td>
+            <td> Alex Michaelides</td>
+            <td>Psychological Fiction</td>
+        </tr>
+    </table>
+    <footer>
+        <p>Donate</p>
+    </footer>
+</body>
+
+</html>  -->
+<!-- 
+<html>
+
+<head>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <table style="width:100%">
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Priya</td>
+            <td>Sharma</td>
+            <td>24</td>
+        </tr>
+        <tr>
+            <td>Arun</td>
+            <td>Singh</td>
+            <td>32</td>
+        </tr>
+        <tr>
+            <td>Sam</td>
+            <td>Watson</td>
+            <td>41</td>
+        </tr>
+    </table>
+</body>
+
+</html>
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <style>
+         * {
+             background-color: rgb(33, 31, 31);
+             color: aliceblue;
+             font-family: Arial, Helvetica, sans-serif;
+         }
+         div {
+             display: flex;
+             justify-content: center;
+             margin-left: 300px;
+             margin-right: 300px;
+             padding: 10px;
+         }
+         p {
+             border-style: double;
+             border-width: 2px;
+             border-color: aliceblue;
+             padding: 10px;
+         }
+         #First, #Second {
+             border-style: double;
+             border-width: 2px;
+             border-color: aliceblue;
+             padding: 10px;
+             margin-bottom: 20px;
+         }
+     </style>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+ </head>
+ <body>
+     <div id="First">
+         <h1>Hello world</h1>
+         <p>This is a paragraph inside the first div.</p>
+     </div>
+     <div id="Second">
+         <h1>Have a nice day</h1>
+         <p>This is a paragraph inside the second div.</p>
+     </div>
+     <div id="Third">
+         <!-- Content will be inserted here by JavaScript -->
+     </div>
+     <script>
+         let fname = document.getElementById('First');
+         let lname = document.getElementById('Second');
+         let comb = fname.innerHTML.concat(lname.innerHTML);
+         let final = document.getElementById('Third');
+         final.innerHTML = comb;
+     </script>
+ </body>
+ </html>
+ 
